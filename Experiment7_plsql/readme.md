@@ -37,6 +37,29 @@ END;
 **Expected Output:**  
 Greater number is: 80
 
+### Program :
+
+```
+declare 
+a int;
+b int;
+BEGIN
+    a := 20;
+    b := 80;
+    if a>b THEN
+      
+    DBMS_OUTPUT.PUT_LINE(a|| ' is greater than '||b);
+    else
+    DBMS_OUTPUT.PUT_LINE(b|| ' is greater than '|| a);
+    end if;
+END;
+/
+```
+### Output :
+
+<img width="375" height="194" alt="image" src="https://github.com/user-attachments/assets/2406d812-e70d-4d74-a4c2-b04e98d32894" />
+
+
 ---
 
 ## 2. Write a PL/SQL program to Calculate Sum of First N Natural Numbers
@@ -92,3 +115,4 @@ Largest of three number is 15
 
 ## RESULT
 Thus, the PL/SQL programs using variables, conditionals, and loops were executed successfully.
+
