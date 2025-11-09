@@ -105,123 +105,201 @@ CREATE TABLE Table_Name (
 
 **Question 1**
 --
--- Paste Question 1 here
+-- Create a table named Employees with the following columns:
+
+EmployeeID as INTEGER
+FirstName as TEXT
+LastName as TEXT
+HireDate as DATE
 
 ```sql
--- Paste your SQL code below for Question 1
+-- create table Employees(
+EmployeeID INTEGER,
+FirstName TEXT,
+LastName TEXT,
+HireDate DATE
+);
 ```
 
 **Output:**
+<img width="1233" height="407" alt="image" src="https://github.com/user-attachments/assets/f9c48492-8187-485f-9537-2d47e91abf3d" />
 
-![Output1](output.png)
 
 **Question 2**
 ---
--- Paste Question 2 here
+-- Create a table named Orders with the following constraints:
+OrderID as INTEGER should be the primary key.
+OrderDate as DATE should be not NULL.
+CustomerID as INTEGER should be a foreign key referencing Customers(CustomerID).
 
 ```sql
--- Paste your SQL code below for Question 2
+-- create table Orders
+(
+OrderID INTEGER PRIMARY KEY,
+OrderDate DATE NOT NULL,
+CustomerID INTEGER,
+foreign key (CustomerID) references Customers(CustomerID)
+);
 ```
 
 **Output:**
 
-![Output2](output.png)
+<img width="1228" height="372" alt="image" src="https://github.com/user-attachments/assets/398fbad7-4ca5-4118-9b4b-85f62e5b5d80" />
+
 
 **Question 3**
 ---
--- Paste Question 3 here
+-- Insert all books from Out_of_print_books into Books
+
+Table attributes are ISBN, Title, Author, Publisher, YearPublished
 
 ```sql
--- Paste your SQL code below for Question 3
+-- insert into Books(ISBN, Title, Author, Publisher, YearPublished) select 
+ISBN, Title, Author, Publisher, YearPublished from out_of_print_books;
 ```
 
 **Output:**
 
-![Output3](output.png)
+<img width="1229" height="374" alt="image" src="https://github.com/user-attachments/assets/88cc593e-7e10-433c-b6e3-7fa0ed9c07bf" />
+
 
 **Question 4**
 ---
--- Paste Question 4 here
+-- Write an SQL query to add a new column email of type TEXT to the Student_details table, and ensure that this column cannot contain NULL values and make default value as 'Invalid'
+
 
 ```sql
--- Paste your SQL code below for Question 4
+-- alter table Student_details add column email TEXT NOT NULL DEFAULT 'Invalid';
 ```
 
 **Output:**
 
-![Output4](output.png)
+<img width="1248" height="334" alt="image" src="https://github.com/user-attachments/assets/06257464-e88f-4c5e-a615-b5d56a571026" />
+
 
 **Question 5**
 ---
--- Paste Question 5 here
+-- Create a table named Locations with the following columns:
+
+LocationID as INTEGER
+LocationName as TEXT
+Address as TEXT
 
 ```sql
--- Paste your SQL code below for Question 5
+-- create table Locations(
+LocationID INTEGER,
+LocationName TEXT,
+Address TEXT
+);
 ```
 
 **Output:**
 
-![Output5](output.png)
+<img width="1236" height="465" alt="image" src="https://github.com/user-attachments/assets/7fa4baba-8faf-43a8-b4d0-5d10c4e31b0e" />
+
 
 **Question 6**
 ---
--- Paste Question 6 here
+--Insert the following customers into the Customers table:
+
+CustomerID  Name         Address     City        ZipCode
+----------  -----------  ----------  ----------  ----------
+302         Laura Croft  456 Elm St  Seattle     98101
+303         Bruce Wayne  789 Oak St  Gotham      10001
 
 ```sql
--- Paste your SQL code below for Question 6
+-- insert into Customers(CustomerID,Name, Address, City, ZipCode)
+values
+(302, 'Laura Croft', '456 Elm St', 'Seattle',98101),
+(303,'Bruce Wayne','789 Oak St','Gotham',10001);
 ```
 
 **Output:**
 
-![Output6](output.png)
+<img width="1231" height="466" alt="image" src="https://github.com/user-attachments/assets/22472124-248b-4ae4-af2e-046d9edbfb5e" />
+
 
 **Question 7**
 ---
--- Paste Question 7 here
+-- Create a table named Department with the following constraints:
+DepartmentID as INTEGER should be the primary key.
+DepartmentName as TEXT should be unique and not NULL.
+Location as TEXT.
 
 ```sql
--- Paste your SQL code below for Question 7
+-- create table Department (
+DepartmentID INTEGER primary key,
+DepartmentName TEXT NOT NULL UNIQUE,
+Location TEXT
+);
 ```
 
 **Output:**
 
-![Output7](output.png)
+<img width="1235" height="367" alt="image" src="https://github.com/user-attachments/assets/25c7ade0-5b58-4922-994f-6b4bf27e75f8" />
+
 
 **Question 8**
 ---
--- Paste Question 8 here
+-- Insert the below data into the Customers table, allowing the City and ZipCode columns to take their default values.
+
+CustomerID  Name          Address
+----------  ------------  ----------
+304         Peter Parker  Spider St      
+
+Note: The City and ZipCode columns will use their default values.
 
 ```sql
--- Paste your SQL code below for Question 8
+-- insert into Customers
+(CustomerID,Name,Address)values
+(304,'Peter Parker','Spider St');
 ```
 
 **Output:**
 
-![Output8](output.png)
+<img width="1229" height="398" alt="image" src="https://github.com/user-attachments/assets/2da928d7-3471-484e-926a-97678c7e0a79" />
+
 
 **Question 9**
 ---
--- Paste Question 9 here
+-- Create a new table named item with the following specifications and constraints:
+item_id as TEXT and as primary key.
+item_desc as TEXT.
+rate as INTEGER.
+icom_id as TEXT with a length of 4.
+icom_id is a foreign key referencing com_id in the company table.
+The foreign key should set NULL on updates and deletes.
+item_desc and rate should not accept NULL.
 
 ```sql
--- Paste your SQL code below for Question 9
+--create table item(
+item_id TEXT primary key,
+item_desc TEXT NOT NULL,
+rate INTEGER NOT NULL,
+icom_id TEXT(4),
+foreign key (icom_id) references company(com_id)
+ON UPDATE SET NULL
+ON DELETE SET NULL
+);
 ```
 
 **Output:**
 
-![Output9](output.png)
+<img width="1227" height="437" alt="image" src="https://github.com/user-attachments/assets/b11d51b5-4200-4373-920c-964928749f70" />
+
 
 **Question 10**
 ---
--- Paste Question 10 here
+-- Write a SQL Query to add an attribute designation in the employee table with the data type VARCHAR(50).
 
 ```sql
--- Paste your SQL code below for Question 10
+--alter table employee add column designation varchar(50);
 ```
 
 **Output:**
 
-![Output10](output.png)
+<img width="1229" height="376" alt="image" src="https://github.com/user-attachments/assets/5737e8f6-b8ef-44f8-ae55-c7bfa4f7150f" />
+
 
 
 ## RESULT
