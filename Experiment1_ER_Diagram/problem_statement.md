@@ -23,16 +23,17 @@ FlexiFit Gym wants a database to manage its members, trainers, and fitness progr
 
 ### ER Diagram:
 *Paste or attach your diagram here*  
-![ER Diagram](er_diagram_fitness.png)
+<img width="784" height="496" alt="image" src="https://github.com/user-attachments/assets/ddbed31a-600b-47c6-b174-9ecba8da8387" />
+
 
 ### Entities and Attributes
 
 | Entity | Attributes (PK, FK) | Notes |
 |--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
+| Member |id(pk),name,type    |       |
+|Fitness | Payment , Salary   |       |
+| Gym    |                    |       |
+|Program |  Name ,seats       |       |
 |        |                    |       |
 
 ### Relationships and Constraints
@@ -65,7 +66,8 @@ The Central Library wants to manage book lending and cultural events.
 
 ### ER Diagram:
 *Paste or attach your diagram here*  
-![ER Diagram](er_diagram_library.png)
+<img width="827" height="395" alt="image" src="https://github.com/user-attachments/assets/eab0ad0c-3bd0-4c32-9e5a-e387a55d0ce3" />
+
 
 ### Entities and Attributes
 
@@ -107,7 +109,8 @@ A popular restaurant wants to manage reservations, orders, and billing.
 
 ### ER Diagram:
 *Paste or attach your diagram here*  
-![ER Diagram](er_diagram_restaurant.png)
+<img width="940" height="325" alt="image" src="https://github.com/user-attachments/assets/61a750f4-4006-49b5-adbe-5e4c4c1099a0" />
+
 
 ### Entities and Attributes
 
